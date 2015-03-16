@@ -9,4 +9,4 @@ page = Nokogiri::HTML(open(PAGE_URL))
 
 links = page.css('tr td div a').map{|link| link['href']}
 
-p links
+links.each {|link| p link}
